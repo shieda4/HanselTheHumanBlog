@@ -12,6 +12,7 @@ psycopg2-binary = "*"
 django-environ = "*"
 pillow = "*"
 markdown = "*"
+django-cleanup = "*"
 
 [dev-packages]
 
