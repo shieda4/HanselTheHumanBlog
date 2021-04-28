@@ -32,7 +32,7 @@ DEBUG = False
 
 SECURE_SSL_REDIRECT = not DEBUG
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['hanselthecomputerscientist.me', '127.0.0.1']
 
 # Application definition
 
