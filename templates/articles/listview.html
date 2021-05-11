@@ -35,8 +35,10 @@
     <div class="row">
         {% for article in articles %}
         <div class="col-md-4 mb-5">
-            <div class="card h-100 w-50">
-                <img class="card-img-top" src="{{ article.image.url }}" alt="">
+            <div class="card">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <img class="card-img-top embed-responsive-item" src="{{ article.image.url }}" alt="">
+                </div>
                 <div class="card-body">
                     <h4 class="card-title">{{ article.title }}</h4>
                     <p class="card-text">{{ article.content| truncatechars:75 | markdown | safe }}</p>
