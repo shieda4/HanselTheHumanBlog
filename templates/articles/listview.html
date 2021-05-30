@@ -1,9 +1,11 @@
 {% extends '_base.html' %}
 {% load markdown_extras %}
+
 {% block meta %}
 {% endblock meta %}
 
 {% block title %}
+Hansel's Blog
 {% endblock title %}
 
 {% block content %}
@@ -15,7 +17,8 @@
         <div class="col-md-12 mb-5">
             <h2>What this is</h2>
 
-            <p>This is my blog about anything. Will post whatever I want. Will also serve as my notes, and my thoughts. </p>
+            <p>This is my blog about anything. Will post whatever I want. Will also serve as my notes, and my thought
+                bucket. </p>
             <hr>
         </div>
     </div>
@@ -30,7 +33,7 @@
                 </div>
                 <div class="card-body">
                     <h4 class="card-title">{{ article.title }}</h4>
-                    <p class="card-text">{{ article.content| truncatechars:75 | markdown | safe }}</p>
+                    <p class="card-text">{{ article.content| truncatechars:70 | markdown | safe }}</p>
                 </div>
                 <div class="card-footer ">
                     <center>
