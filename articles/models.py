@@ -12,3 +12,6 @@ class Article(models.Model):
     date = models.DateTimeField(auto_now=True)
     image = models.ImageField()
     content = models.TextField()
+
+    def __str__(self):
+        return self.title
