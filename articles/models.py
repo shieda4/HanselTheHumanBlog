@@ -13,5 +13,8 @@ class Article(models.Model):
     image = models.ImageField()
     content = models.TextField()
 
+    class Meta:
+        ordering = ['-date']
+
     def __str__(self):
         return self.title
