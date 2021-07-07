@@ -11,7 +11,7 @@ Hansel's Blog
 {% block content %}
 
 <!-- Page Content -->
-<div class="container py-5 mb-5 px-5">
+<div class="container py-5 mb-5 px-lg-5 px-md-3">
 
     <div class="row">
         <div class="col-md-12 mb-5">
@@ -26,7 +26,7 @@ Hansel's Blog
 
     <div class="row">
         {% for article in articles %}
-        <div class="col-md-4 mb-5">
+        <div class="col-md-6 col-sm-12 col-lg-4 mb-5">
             <div class="card card">
                 <div class="embed-responsive embed-responsive-16by9">
                     <img class="card-img-top embed-responsive-item" src="{{ article.image.url }}" alt="">
