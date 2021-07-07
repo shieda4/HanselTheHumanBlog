@@ -14,7 +14,7 @@ class Article(models.Model):
     content = models.TextField()
 
     class Meta:
-        ordering = ['-date']
+        ordering = ['date']
 
     def __str__(self):
         return self.title
