@@ -1,0 +1,46 @@
+{% extends '_base.html' %}
+{% load markdown_extras %}
+
+{% block meta %}
+{% endblock meta %}
+
+{% block title %}
+Hansel's Notes
+{% endblock title %}
+
+{% block content %}
+
+<!-- Page Content -->
+<div class="container py-5 mb-5 px-lg-5 px-md-3">
+
+    <div class="row">
+        <div class="col-md-12 mb-5">
+            <h2>Hansel's Notes</h2>
+
+            <p class="lead">My notes about various topics. Includes personal thoughts, technical notes, and memorable
+                quotes I encountered.</p>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        {% for notebook in notebooks %}
+        <div class="col-md-6 col-sm-12 col-lg-4 mb-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{ notebook.title }}</h5>
+                </div>
+                <div class="card-footer ">
+                    <center>
+                        <a href="{% url 'notebook' notebook.slug %}" class="btn btn-primary">Open</a>
+                    </center>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+{% endblock content %}

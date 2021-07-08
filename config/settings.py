@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 
     # Local
     'articles.apps.ArticlesConfig',
+    'notes.apps.NotesConfig',
 ]
 
 MIDDLEWARE = [
