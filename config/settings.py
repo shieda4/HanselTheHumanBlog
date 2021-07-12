@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 SECURE_SSL_REDIRECT = not DEBUG
 
@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     # 3rd Party
     'crispy_forms',
     'django_cleanup',
+    'rest_framework',
+    'rest_framework.authtoken',
 
     # Local
     'articles.apps.ArticlesConfig',
@@ -156,3 +158,16 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Django Restful API Framework
+# SessionAuthentication for the  Browsable API
+# TokenAuthentication to pass authentication credentials through http/s
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}

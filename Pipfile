@@ -13,6 +13,9 @@ django-environ = "*"
 pillow = "*"
 markdown = "*"
 django-cleanup = "*"
+djangorestframework = "*"
+django-rest-auth = "*"
+setuptools = "*"
 
 [dev-packages]
 
