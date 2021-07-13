@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django_cleanup',
     'rest_framework',
     'rest_framework.authtoken',
+    'rest_auth',
 
     # Local
     'articles.apps.ArticlesConfig',
